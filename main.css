@@ -79,3 +79,85 @@ li a {
   margin-top: 5em;
   margin-right: auto;
 }
+
+#landing {
+  background: url("./images/landing-bg.jpg") center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: 300px;
+  padding-top: 50px;
+}
+
+.wrapper-landing {
+  margin: auto;
+  padding-left: 20px;
+  text-align: center;
+  width: 20em;
+  line-height: 3em;
+  padding-top: 25px;
+}
+
+.wrapper-landing h1 {
+  font-size: 35px;
+}
+
+.landing {
+  margin: auto;
+}
+
+.btn {
+  font-family: "Poppins", sans-serif;
+  margin: 25px 10px 25px 0;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.apple {
+  margin-bottom: 50px;
+  background-color: black;
+  color: white;
+  border-color: red;
+}
+
+.apple:hover {
+  background-color: #6D0000;
+}
+
+.play {
+  background-color: white;
+}
+
+.play:hover {
+  background-color: #FFA0A0;
+}
+
+@media only screen and (min-width: 636px) {
+  .wrapper-landing {
+    width: 30em;
+  }
+  .wrapper-landing h1 {
+    font-size: 40px;
+  }
+  .btn {
+    margin-top: 100px;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .wrapper-landing {
+    margin-left: 20px;
+  }
+  .wrapper-landing h1 {
+    font-size: 50px;
+    line-height: 1.2em;
+    text-align: left;
+  }
+  .wrapper-landing .apple {
+    margin-left: -80px;
+  }
+}
