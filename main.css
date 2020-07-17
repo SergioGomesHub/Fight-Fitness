@@ -95,6 +95,7 @@ li a {
   width: 20em;
   line-height: 3em;
   padding-top: 25px;
+  animation: landing-animation 3s 1 0s linear;
 }
 
 .wrapper-landing h1 {
@@ -103,6 +104,21 @@ li a {
 
 .landing {
   margin: auto;
+}
+
+@keyframes landing-animation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(xx) translateY(-25px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(xx) translateY(0);
+    opacity: 1;
+  }
 }
 
 .btn {
