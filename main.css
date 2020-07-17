@@ -154,6 +154,7 @@ li a {
 @media only screen and (min-width: 636px) {
   .wrapper-landing {
     width: 30em;
+    margin-top: 100px;
   }
   .wrapper-landing h1 {
     font-size: 40px;
