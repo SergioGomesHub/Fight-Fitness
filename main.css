@@ -424,9 +424,10 @@ cite {
 
 .btn-send {
   font-family: inherit;
+  background-color: white;
   color: #C60000;
   border: 1px solid #C60000;
-  padding: 5px;
+  padding: 10px;
   font-size: 16px;
   margin: 20px auto;
   cursor: pointer;
@@ -439,11 +440,6 @@ cite {
   background-color: #332E2E;
   position: relative;
   bottom: 500px;
-}
-
-#test {
-  background-color: orange;
-  height: 100vh;
 }
 
 @media only screen and (max-width: 635px) {
