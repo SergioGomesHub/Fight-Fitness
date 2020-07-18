@@ -458,3 +458,16 @@ cite {
     font-size: 16px;
   }
 }
+
+footer {
+  background-image: linear-gradient(#2A2828, #767676);
+  height: 80px;
+}
+
+footer ul {
+  margin: auto;
+}
+
+footer li {
+  margin: auto;
+}
