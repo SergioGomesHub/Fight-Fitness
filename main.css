@@ -300,6 +300,15 @@ cite {
   padding: 30px;
 }
 
+.news-wrapper p {
+  position: relative;
+  right: 60px;
+}
+
+.news-wrapper h1 {
+  font-size: 1.5em;
+}
+
 .news-button {
   background-color: #707070;
   color: white;
