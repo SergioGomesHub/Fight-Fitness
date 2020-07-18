@@ -238,25 +238,6 @@ li span {
   transform: scale(1.2) rotateZ(180deg);
 }
 
-@keyframes arrowClick {
-  0% {
-    transform: rotate(xx);
-    opacity: 1;
-  }
-  50% {
-    transform: rotate(xx);
-    opacity: 0.5;
-  }
-  100% {
-    transform: rotate(xx);
-    opacity: 1;
-  }
-}
-
-.arrowClick {
-  animation: yourAnimation 1s infinite 0s linear;
-}
-
 .right {
   position: absolute;
   right: 0px;
