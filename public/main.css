@@ -452,3 +452,21 @@ footer ul {
 footer li {
   margin: auto;
 }
+
+.post {
+  color: black;
+  background-color: #D3D3D3;
+}
+
+.post h1 {
+  font-size: 40px;
+}
+
+.post button {
+  padding: 10px;
+  font-size: 20px;
+  background-color: #17A2B8;
+  color: white;
+  border: 0px;
+  cursor: pointer;
+}

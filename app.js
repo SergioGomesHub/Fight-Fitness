@@ -16,6 +16,16 @@ app.get("/", function(req,res){
   res.sendFile(__dirname + "public/index.html");
 });
 
+//Newsletter
+app.post("/newsletter", function(req,res){
+  res.sendFile(__dirname + "/success-news.html");
+});
+
+//Contact
+app.post("/contact", function(req,res){
+  res.sendFile(__dirname + "/success-contact.html");
+});
+
 app.listen(3000, function(){
   console.log("Server is running on port 3000");
 });
