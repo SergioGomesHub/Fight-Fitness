@@ -1,5 +1,6 @@
 //jshint esversion:6
-
+//dotenv needs to be at the top
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 
