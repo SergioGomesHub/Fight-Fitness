@@ -18,8 +18,8 @@ app.get("/", function(req,res){
   res.sendFile(__dirname + "public/index.html");
 });
 
-//Mailchimp
-app.post("/", function(req,res){
+//Newsletter Submit to Mailchimp
+app.post("/newsletter", function(req,res){
   //From index.html
   const name = req.body.fName;
   const email = req.body.email;
@@ -50,6 +50,12 @@ app.post("/", function(req,res){
   };
 
   const request = https.request(url, options, function(response){
+    if (response.statusCode === 200){
+      res.sendFile(__dirname + "/success-news.html");
+    } else {
+      res.sendFile(__dirname + "/failure.html");
+    }
+
     response.on("data", function(data){
       console.log(JSON.parse(data));
     });
@@ -62,11 +68,6 @@ app.post("/", function(req,res){
 
 });
 
-
-//Newsletter
-app.post("/newsletter", function(req,res){
-  res.sendFile(__dirname + "/success-news.html");
-});
 
 //Contact
 app.post("/contact", function(req,res){
