@@ -3,6 +3,7 @@
 require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
+const https = require("https");
 
 const app = express();
 
@@ -16,6 +17,51 @@ app.use(express.static("public"));
 app.get("/", function(req,res){
   res.sendFile(__dirname + "public/index.html");
 });
+
+//Mailchimp
+app.post("/", function(req,res){
+  //From index.html
+  const name = req.body.fName;
+  const email = req.body.email;
+
+  //Data that will be sent to Mailchimp API
+  const data = {
+    members: [
+      {
+        email_address: email,
+        status: "subscribed",
+        merge_fields: {
+          FNAME: name
+        }
+      }
+    ]
+  };
+
+  //Turning data into JSON so Mailchimp can receive it
+  const jsonData = JSON.stringify(data);
+
+  //Both const required by https module
+  const url = "https://us17.api.mailchimp.com/3.0/lists/" + process.env.LIST;
+
+  const options = {
+    method: "POST",
+    auth: "sergio1:" + process.env.API_KEY,
+
+  };
+
+  const request = https.request(url, options, function(response){
+    response.on("data", function(data){
+      console.log(JSON.parse(data));
+    });
+  });
+
+  //Write the new data to Mailchimp
+  request.write(jsonData);
+  request.end();
+
+
+});
+
 
 //Newsletter
 app.post("/newsletter", function(req,res){
